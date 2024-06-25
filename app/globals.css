@@ -1,0 +1,77 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: "#FFFF";
+}
+
+.active span {
+    @apply text-orange-400;
+  }
+
+.rec.rec-arrow-right{
+    visibility: hidden;
+}
+
+.rec.rec-arrow-left{
+    visibility: hidden;
+}
+
+
+.rec.rec-dot_active{
+    background-color: orange;
+    border-color: orange;
+    border-radius: 10px;
+}
+
+.rec.rec-dot{
+    color: orange;
+    border-color: orange;
+}
+
+  @media screen and (min-width: 1024px) {
+    .crousel-wrapper {
+      padding: 0 10rem; /* Padding of 10rem on the left and right sides for screens larger than 1024px */
+    }
+  }
+
+  /* @media (max-width: 375px) {
+    .bUejpD {
+      width: 500px !important;
+    }
+  } */
+  
+  /* .crousel-wrap{
+    width: ;
+  } */
+
+  @media (max-width: 375px) {
+    .crousel-wrap .gSFooI  {
+      width: 100% !important;
+      margin-left: 0px;
+      padding: 0px;
+      /* margin-right: 100px; */
+      /* visibility: ; */
+    
+    }
+  }
+
+
+  .hFlVyB{
+    box-shadow: 0 0 1px 3px #fff !important;
+  }
+
+  .crousel-wrap.bUejpD{
+    padding: 20px !important;
+  }
+
+ .crousel-wrapper{
+  margin: 0,0,0,0;
+  width: 100vw;
+ }
+/* 
+ .crousel-wrapper.sc-gEvDqW{
+  width: 200%  !important;
+ } */

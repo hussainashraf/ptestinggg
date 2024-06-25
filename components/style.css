@@ -1,0 +1,26 @@
+.vline {
+    border-left: 4px dashed orange; 
+    height: 15%; 
+    left: 140px;
+    /* top: 120;  */
+    bottom: 142px;
+    position: relative;
+  
+  }
+
+  .line {
+    border-top: 4px dashed orange; /* Set the dashed line style */
+    width: 115px; /* Set the width of the line */
+    bottom: 170px;
+    left: 265px;
+    position: relative; /* Adjust the margin as needed */
+  }
+  
+  @media (max-width: 1200px) {
+    .vline {
+      display: none; /* Hide the line on screens smaller than 768px */
+    }
+    .line{
+        display: none;
+    }
+  }
