@@ -11,23 +11,16 @@ import Image from "next/image";
 import PurchaseModal from "./modal/priceform";
 import Link from "next/link";
 // import {ConnectLines} from 'react-connect-lines'
-const ELEMENTS = [
-  { id: "id-1", connectWith: [{ id: "id-2",color:'orange' }]  },
-  { id: "id-2", connectWith: [{ id: "id-3" ,color:'orange' }] },
-  { id: "id-3", connectWith: [{ id: "id-4",color:'orange'  }] },
-  { id: "id-4", connectWith: [{ color:'orange'  }] }
-]
-const ClientOnlyConnectLines = dynamic(
-  () => import('react-connect-lines').then((mod) => mod.ConnectLines),
-  { ssr: false }
-);
+// const ELEMENTS = [
+//   { id: "id-1", connectWith: [{ id: "id-2",color:'orange' }]  },
+//   { id: "id-2", connectWith: [{ id: "id-3" ,color:'orange' }] },
+//   { id: "id-3", connectWith: [{ id: "id-4",color:'orange'  }] },
+//   { id: "id-4", connectWith: [{ color:'orange'  }] }
+// ]
 // const ConnectLines = dynamic(
-//   () => import('react-connect-lines').then((mod) => mod.default || mod),
+//   () => import('react-connect-lines').then((mod) => mod.ConnectLines),
 //   { ssr: false }
 // );
-function ConnectLinesWrapper({ elements }) {
-  return <ClientOnlyConnectLines elements={elements} />;
-}
 export default function Price() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const breakPoints = [
@@ -1014,7 +1007,7 @@ export default function Price() {
           </div>
         </div>
         <Footer />
-        <ConnectLinesWrapper elements={ELEMENTS} />
+        {/* <ConnectLines elements={ELEMENTS} /> */}
       </div>
     
   );
