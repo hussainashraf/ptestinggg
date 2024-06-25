@@ -17,10 +17,17 @@ const ELEMENTS = [
   { id: "id-3", connectWith: [{ id: "id-4",color:'orange'  }] },
   { id: "id-4", connectWith: [{ color:'orange'  }] }
 ]
-const ConnectLines = dynamic(
+const ClientOnlyConnectLines = dynamic(
   () => import('react-connect-lines').then((mod) => mod.ConnectLines),
   { ssr: false }
 );
+// const ConnectLines = dynamic(
+//   () => import('react-connect-lines').then((mod) => mod.default || mod),
+//   { ssr: false }
+// );
+function ConnectLinesWrapper({ elements }) {
+  return <ClientOnlyConnectLines elements={elements} />;
+}
 export default function Price() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const breakPoints = [
@@ -1007,7 +1014,7 @@ export default function Price() {
           </div>
         </div>
         <Footer />
-        <ConnectLines elements={ELEMENTS} />
+        <ConnectLinesWrapper elements={ELEMENTS} />
       </div>
     
   );
