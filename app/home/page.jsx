@@ -11,14 +11,14 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import Link from "next/link";
 import axios from "axios";
 import moment from "moment";
-const ConnectProvider = dynamic(
-  () => import('react-connect-lines').then((mod) => mod.ConnectProvider),
-  { ssr: false }
-);
-const Connect = dynamic(
-  () => import('react-connect-lines').then((mod) => mod.Connect),
-  { ssr: false }
-);
+// const ConnectProvider = dynamic(
+//   () => import('react-connect-lines').then((mod) => mod.ConnectProvider),
+//   { ssr: false }
+// );
+// const Connect = dynamic(
+//   () => import('react-connect-lines').then((mod) => mod.Connect),
+//   { ssr: false }
+// );
 export default function Home() {
 
   const [backgroundImage, setBackgroundImage] = useState("");
@@ -527,7 +527,7 @@ export default function Home() {
           </div>
         </Carousel>
       </div>
-      <ConnectProvider>
+      {/* <ConnectProvider> */}
         <div className="bg-gradient-to-r from-[rgba(254,242,232,0.5)] to-[rgba(240,243,254,0.5)" >
           <div className=" lg:w-1/3 mt-10   lg:mb-40 mx-10 sm lg:translate-y-20 lg:ml-32">
             <h5 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -540,12 +540,12 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-col lg:flex-row justify-center items-center gap-20 mx-4 sm:mx-10 lg:mx-20 mt-32 mb-40 lg:mt-20">
             {/* Box 1 */}
-            <Connect
+            {/* <Connect
               id="element-1"
               connectWith={[
                 { id: "element-2", color: "red", stroke: "solid" },
               ]}
-            >
+            > */}
               <div
                 className="bg-white border border-transparent rounded-lg p-6 shadow-xl h-[220px] w-[340px] transition duration-300 transform hover:scale-110"
                 style={{
@@ -568,14 +568,14 @@ export default function Home() {
                   consultations tailored to your unique business needs.
                 </p>
               </div>
-            </Connect>
+            {/* </Connect> */}
             {/* Box 2 */}
-            <Connect
+            {/* <Connect
               id="element-2"
               connectWith={[
                 { id: "element-3", color: "red", stroke: "solid" },
               ]}
-            >
+            > */}
               <div
                 className="bg-white border border-transparent rounded-lg p-6 shadow-xl h-[220px] w-[340px] transition duration-300 transform hover:scale-110"
                 style={{
@@ -598,11 +598,11 @@ export default function Home() {
                   handling and solutions tailored to your specific needs.
                 </p>
               </div>
-            </Connect>
+            {/* </Connect> */}
 
             {/* Box 3 */}
             {/* <Connect></Connect> */}
-            <Connect id="element-3">
+            {/* <Connect id="element-3"> */}
               <div
                 className="bg-white border border-transparent rounded-lg p-6 shadow-xl h-[220px] w-[340px] transition duration-300 transform hover:scale-110"
                 style={{
@@ -625,10 +625,10 @@ export default function Home() {
                   an in-depth discussion to address your needs.
                 </p>
               </div>
-            </Connect>
+            {/* </Connect> */}
           </div>
         </div>
-      </ConnectProvider>
+      {/* </ConnectProvider> */}
       <div className="lg:mb-80">
         <div>
           <h1 className=" text-3xl mt-10 flex flex-row justify-center items-center mx-10 md:text-4xl lg:text-5xl font-bold  ">
